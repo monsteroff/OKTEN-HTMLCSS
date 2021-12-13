@@ -1,0 +1,119 @@
+@media (max-width: 1024px){
+    section > div{
+        width: 100%;
+        padding: 0 22px;
+    }
+    .menu_mobile_btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu_mobile_btn{
+        width: 40px;
+        height: 40px;
+    }
+    .menu_mobile_btn span{
+        width: 32px;
+        height: 3.5px;
+        background-color: #FF7400;
+        position: relative;
+        border-radius: 2px;
+        transition: 0.1s;
+    }
+    .menu_mobile_btn span:before,
+    .menu_mobile_btn span:after{
+        content: "";
+        position: absolute;
+        width: 32px;
+        height: 3.5px;
+        background-color: #FF7400;
+        border-radius: 2px;
+    }
+    .menu_mobile_btn span:before{
+        top: -9px;
+    }
+    .menu_mobile_btn span:after{
+        bottom: -9px;
+    }
+    .menu_mobile_btn span.active{
+        height: 0;
+        transform: rotate(180deg);
+    }
+    .menu_mobile_btn span.active:before{
+        transform: translate(0,7.5px) rotate(45deg);
+    }
+    .menu_mobile_btn span.active:after{
+        transform: translate(0,-7.5px) rotate(-45deg);
+    }
+    .menu_mobile_btn{
+        z-index: 3;
+    }
+    .menu_mobile.active{
+        color: white;
+        display: flex;
+        height: 100vh;
+        padding: 70px 22px;
+        width: fit-content;
+        border-left: 1px solid #FF7400;
+        background-color: rgba(0, 0, 0, 0.829);
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 2;
+    }
+    .menu_mobile.active ul{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .menu_mobile.active li div{
+        display: flex;
+        column-gap: 10px;
+    }
+    .menu_mobile.active .menu__button{
+        width: 157px;
+        height: 47px;
+        border: none;
+        background-color: #FF7400;
+        color: white;
+        font-weight: 700;
+    }
+    
+    .header{
+        margin: 20px 0;
+    }
+    .logo{
+        height: 40px;
+        width: 54px;
+    }
+    .logo__rectangle{
+        width: 22px;
+        height: 22px;
+    }
+    .logo__rectangle:nth-child(2){
+        transform: rotate(45deg) translate(-5px,5px)
+    }
+    .menu{
+        display: none;
+    }
+    .hero{
+        justify-content: center;
+    }
+}
+@media (max-width:550px){
+    .hero > div h2{
+        font-weight: 400;
+        font-size: 30px;
+    }
+    .hero > div h2:nth-child(2){
+        font-size: 40px;
+    }
+    .hero > div h2:nth-child(3){
+        font-size: 15px;
+    }
+    .hero span::before,
+    .hero span::after
+    {
+        display: none;
+    }
+}

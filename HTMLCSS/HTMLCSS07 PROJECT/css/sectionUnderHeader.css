@@ -1,0 +1,232 @@
+.under-header{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 10px;
+}
+.kataloq{
+    width: 16%;
+    height: 53px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 12px;
+    background-color: #005BB9;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.kataloq:hover{
+    background-color: #0079f1;
+}
+.kataloq h2{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+}
+.under-header .kataloq span{
+    display: inline-block;
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    position: relative;
+}
+.under-header .kataloq span:before,
+.under-header .kataloq span:after{
+    content: "";
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    top: -6px;
+}
+.under-header .kataloq span:after{
+    top:6px;
+}
+.search{
+    display: flex;
+    height: 53px;
+    width: 62%;
+    max-width: 650px;
+    align-items: center;
+    justify-content: flex-end;
+}
+.search input{
+    width: 84.46%;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    background: #F4F5FA;
+    border-radius: 6px 0px 0px 6px;
+    height: 53px;
+    transition: 0.3s;
+    border: 1px solid transparent;
+    text-overflow: ellipsis;
+}
+input[type="text"]:hover{
+    padding: 10px 10px;
+    border: 1px solid #005BB9;
+}
+input::placeholder{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+}
+.nayti{
+    width: 15.54%;
+    min-width: 72px;
+    height: 53px;
+    background-color: #005BB9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 6px 6px 0px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.nayti:hover{
+    background-color: #0079f1;
+}
+.nayti h2{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+}
+.nayti svg{
+    display: none;
+}
+.log-fav-basket{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    column-gap:10px;
+}
+.log-fav-basket>div{
+    height: 28px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-left: 1px solid #E1E5F8;
+    padding-left: 10px;
+    column-gap: 5px;
+    cursor: pointer;
+}
+path{
+    transition: 0.3s;
+}
+.log-fav-basket>div:hover svg path{
+    fill: #0079f1;
+}
+.log-fav-basket>div h2{
+    transition: 0.3s;
+}
+.log-fav-basket>div:hover h2{
+    color: #0079f1;
+}
+.log-fav-basket>div:nth-child(1){
+    border: none;
+    padding-left: 0;
+}
+.log-fav-basket{
+    white-space: nowrap;
+}
+.fixed-bottom-log{
+    display: none;
+}
+@media (max-width:1855px){
+    .kataloq{
+        width: 53px;
+        min-width: 53px;
+    }
+    .kataloq h2{
+        display:none;
+    }
+}
+@media (max-width:1111px){
+    .log-fav-basket>div{
+        flex-direction: column;
+        text-align: center;
+    }
+    .log-fav-basket>div h2{
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 15px;
+    }
+    .log-fav-basket>div .littleh2{
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 11px;
+    }
+    .log-fav-basket>div svg{
+        min-width: 21px;
+        min-height: 18px;
+    }
+}
+@media (max-width:767px){
+    .under-header{
+        padding: 0;
+    }
+    .kataloq,
+    .nayti{
+        max-width: 34px;
+        max-height: 34px;
+    }
+    .nayti h2{
+        display: none;
+    }
+    .nayti svg{
+        display: inline-block;
+    }
+    .search{
+        min-width: calc(100% - 64px);
+    }
+    .search input{
+        height: 34px;
+        width: calc(100% - 34px);
+    }
+    .log-fav-basket{
+        display: none;
+    }
+
+    .fixed-bottom-log{
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: white;
+        height: 60px;
+        z-index: 999;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        column-gap: 1%;
+    }
+    .fixed-bottom-log__item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 65%;
+    }
+    .fixed-bottom-log__item>div{
+        width: 28px;
+        display: flex;
+        justify-content: center;
+    }
+    .fixed-bottom-log__item h3{
+        font-size: 10px;
+        line-height: 12px;
+    }
+    .fixed-bottom-log__item svg{
+        max-width: 24px;
+        max-height: 24px;
+    }
+    body{
+        margin-bottom: 60px;
+    }
+}

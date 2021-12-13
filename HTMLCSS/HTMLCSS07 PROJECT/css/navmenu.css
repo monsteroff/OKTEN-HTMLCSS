@@ -1,0 +1,100 @@
+.kataloq.active{
+    background-color: red;
+}
+.kataloq span,
+.kataloq span::before,
+.kataloq span::after{
+    transition: 0.3s;
+}
+.kataloq.active span{
+    transform: rotate(360deg);
+    visibility: hidden;
+    transition: 0s;
+}
+.kataloq.active span::before{
+    transform: rotate(135deg);
+    visibility: visible;
+    top: 0;
+    left: 0;
+}
+.kataloq.active span:after {
+transform: rotate(225deg);
+visibility: visible;
+top: 0;
+left: 0;
+}
+.under-header{
+    position: relative;
+}
+.openedMenu{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100000;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    border-radius: 5px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 20px;
+    transition: 0.3s;
+    overflow: auto;
+}
+.openedMenu ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+.openedMenu *{
+    visibility: hidden;
+}
+.openedMenu a{
+    color: white;
+    font-size: 20px;
+}
+.openedMenu a:hover{
+    color: #23c9fc;
+}
+
+.openedMenu.active{
+    visibility: visible;
+    width: 500px;
+    height: 200px;
+    background-color: #0F2438;
+}
+.openedMenu.active *{
+    visibility: visible;
+}
+
+.openedMenu::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+.openedMenu.active::-webkit-scrollbar {
+    width: 20px;
+}
+  
+.openedMenu::-webkit-scrollbar-track {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 20px;
+    background-color: rgba(15,36,56,1);
+}
+  
+.openedMenu::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 20px;
+    background: rgb(0,164,214);
+}
+@media (max-width: 767px) {
+    .openedMenu.active{
+        width: 240px;
+        height: 200px;
+        background-color: #0F2438;
+    }
+    .openedMenu a{
+        font-size: 14px;
+        white-space: nowrap;
+    }
+}

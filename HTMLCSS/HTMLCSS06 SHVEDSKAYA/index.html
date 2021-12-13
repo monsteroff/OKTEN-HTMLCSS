@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="headerMenuMobile" class="header-menu-mobile">
+        <ul>
+            <li><a href="#">Über Uns</a></li>
+            <li>
+                <h2 onclick="toggleMobileDropDown(this)">Produkte <span></span></h2>
+                <ul>
+                    <li><a href="#">Produkte</a></li>
+                    <li><a href="#">One</a></li>
+                    <li><a href="#">Two</a></li>
+                    <li><a href="#">Three</a></li>
+                </ul>
+            </li>
+            <li>
+                <h2 onclick="toggleMobileDropDown(this)">Peripherietechnik <span></span></h2>
+                <ul>
+                    <li><a href="#">Peripherietechnik</a></li>
+                    <li><a href="#">One</a></li>
+                    <li><a href="#">Two</a></li>
+                    <li><a href="#">Three</a></li>
+                </ul>
+            </li>
+            <li>
+                <h2 onclick="toggleMobileDropDown(this)">Dienstleistungen <span></span></h2>
+                <ul>
+                    <li><a href="#">Dienstleistungen</a></li>
+                    <li><a href="#">One</a></li>
+                    <li><a href="#">Two</a></li>
+                    <li><a href="#">Three</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Klimatechnik</a></li>
+            <li><a href="#">Kontakt</a></li>
+            <li><a href="#">Presse</a></li>
+        </ul>
+    </div>
+    <section class="section-header dflex jc-center ai-center">
+        <div class="header dflex jc-sbetween ai-center">
+            <div class="header-logo dflex ai-center">
+                <img src="img/Logo.png" alt="">
+            </div>
+            <div class="header-menu">
+                <ul>
+                    <li><a href="#">Über Uns</a></li>
+                    <li class="pos-relative">
+                        <a href="#">Produkte</a>
+                        <ul class="pos-absolute">
+                            <li><a href="#">One</a></li>
+                            <li><a href="#">Two</a></li>
+                            <li><a href="#">Three</a></li>
+                        </ul>
+                    </li>
+                    <li class="pos-relative">
+                        <a href="#">Peripherietechnik</a>
+                        <ul class="pos-absolute">
+                            <li><a href="#">One</a></li>
+                            <li><a href="#">Two</a></li>
+                            <li><a href="#">Three</a></li>
+                        </ul>
+                    </li>
+                    <li class="pos-relative">
+                        <a href="#">Dienstleistungen</a>
+                        <ul class="pos-absolute">
+                            <li><a href="#">One</a></li>
+                            <li><a href="#">Two</a></li>
+                            <li><a href="#">Three</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Klimatechnik</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="#">Presse</a></li>
+                </ul>
+            </div>
+            <div onclick="toggleNav()" id="headerMenuMobileButton" class="header-menu-mobile-button">
+                <span></span>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        function toggleNav() {
+            if (document.getElementById("headerMenuMobile").classList.contains("active")) {
+                document.getElementById("headerMenuMobile").classList.remove("active");
+                document.getElementById("headerMenuMobileButton").classList.remove("active");
+
+            } else {
+                document.getElementById("headerMenuMobile").classList.add("active");
+                document.getElementById("headerMenuMobileButton").classList.add("active");
+            }
+        }
+        function toggleMobileDropDown(e){
+            if(e.parentElement.classList.contains("active")){
+                e.parentElement.classList.remove("active")
+            } else {
+                e.parentElement.classList.add("active")
+            }
+        }
+    </script>
+</body>
+
+</html>

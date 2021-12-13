@@ -1,0 +1,18 @@
+.section-under-footer{
+    border-top: 2px solid #1D3044;
+    background-color: #0E1E2F;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+.under-footer h2{
+    color: #737E9B;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+}
+@media (max-width:1111px){
+    .under-footer h2{
+        font-size: 12px;
+        line-height: 14px;
+    }
+}

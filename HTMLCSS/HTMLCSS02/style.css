@@ -1,0 +1,56 @@
+/*starayus ne delat temi variantami kotorie ne bili proydeni*/
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.container {
+    margin: 10px;
+}
+body {
+    background-color: #2b2b2b;
+}
+.white__text {
+    color: white;
+}
+.purple__rext {
+    color: #ff00fb;
+}
+.ta__center {
+    text-align: center;
+}
+.img__container {
+    width: 100%;
+    text-align: center;
+    /*tak kak nelzya display flexom reshil po fastu sdelat tak*/
+}
+.img__container img {
+    height: 45vw;
+}
+ul li a {
+    transition: 0.3s;
+}
+ul li a:hover {
+    color: #ff00fb;
+}
+.ta__justify {
+    text-align: justify;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+
+.fz__26 {
+    font-size: 26px;
+}
+.fz__32 {
+    font-size: 32px;
+}
+.fz__36 {
+    font-size: 36px;
+}
+.fz__40 {
+    font-size: 40px;
+}
