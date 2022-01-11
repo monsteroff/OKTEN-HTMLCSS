@@ -3,7 +3,7 @@ import Post from "./Post";
 import {getPosts} from "../services/user.service";
 
 function Posts() {
-    const [posts, setPosts] = useState({})
+    const [posts, setPosts] = useState([])
     useEffect(() => {getPosts().then(val => setPosts(val.data))}, [])
     return (
         <div className='posts'>

@@ -3,7 +3,7 @@ import User from "./User";
 import {getUsers} from "../services/user.service";
 
 function Users() {
-    const [users, setUsers] = useState({})
+    const [users, setUsers] = useState([])
     useEffect(() => {getUsers().then(val => setUsers(val.data))}, [])
     return (
         <div className='users'>
